@@ -16,11 +16,11 @@ def bmi(weight,height):
     # Way 02    
     if bmi < 16:
         return 'Your BMI: {}. Severely underweight'.format(bmi)
-    elif 16 <= bmi < 18.5:
+    elif bmi < 18.5:
         return "Your BMI: {}. Underweight".format(bmi)
-    elif 18.5 <= bmi < 25:
+    elif bmi < 25:
         return "Your BMI: {}. Normal".format(bmi)
-    elif 25 <= bmi < 30:
+    elif bmi < 30:
         return "Your BMI: {}. Overweight".format(bmi)
     else:
         return 'Your BMI: {}. Obese'.format(bmi)
