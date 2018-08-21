@@ -25,4 +25,10 @@ def background(username):
         
 if __name__ == '__main__':
   app.run(debug=True)
+
+#Cách của Nguyên:
+# Tạo ra 1 list các list có các thông tin lần lượt là danh sách username
+# danh sách họ tên, tuổi, sở thích v..v. trong đó thứ tự lần lượt trong các list con sẽ tương ứng với 
+# thứ tự username => câu lệnh => lấy ra index, vị trí của trường username trong list con đầu tiên
+# Các list các lấy ra các phần tử có index giống với user name và in ra
  

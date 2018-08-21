@@ -14,16 +14,18 @@ def bmi(weight,height):
     # return render_template('serious01.html', posts = posts)
 
     # Way 02    
+    condition = 0
     if bmi < 16:
-        return 'Your BMI: {}. Severely underweight'.format(bmi)
+        condition = 'Severly underweight'
     elif bmi < 18.5:
-        return "Your BMI: {}. Underweight".format(bmi)
+        condition = 'Underweight'
     elif bmi < 25:
-        return "Your BMI: {}. Normal".format(bmi)
+        condition = 'Normal'
     elif bmi < 30:
-        return "Your BMI: {}. Overweight".format(bmi)
+        condition = 'Overweight'
     else:
-        return 'Your BMI: {}. Obese'.format(bmi)
+        condition = 'Obese'
+    return condition
 if __name__ == '__main__':
   app.run(debug = True)
  
