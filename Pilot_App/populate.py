@@ -2,7 +2,17 @@ from models.service import Service
 import mlab
 from faker import Faker
 from random import randint,choice
+from character import character_random
+
 mlab.connect()
+
+image_list = [
+    "../static/image/female-profile.jpg",
+    "../static/image/male-profile.jpg",
+    "../static/image/night.jpg",
+    "../static/image/rocks.jpg",
+    "../static/image/lightning.jpg"
+]
 
 fake = Faker()
 name = fake.name()
@@ -29,7 +39,10 @@ for i in range(50):
         height = randint(150,190),
         phone = fake.phone_number(),
         address = fake.address(),
-        status = choice([True, False])
+        status = choice([True, False]),
+        measurements = [randint(30,90),randint(30,90),randint(30,90)],
+        des = character_random(),
+        image = choice(image_list)
     )
 
     new_service.save()

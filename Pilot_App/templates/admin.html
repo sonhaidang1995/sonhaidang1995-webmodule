@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mùa Đông Không Lạnh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Administrator Playground</h1>
+    <a href="{{ url_for('index')}}">Về trang chủ</a> <br>
+    <a href="{{ url_for('create')}}">Thêm mới</a>
+    <table border = "1px", style = 'border-collapse: collapse'>
+        <caption>SERVICE LIST</caption>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Năm sinh</th>
+            <th>Giới tính</th>
+            <th>Chiều cao</th>
+            <th>Điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Tình trạng</th>
+            <th>Yêu cầu</th>
+        </tr>
+        </thead>
+        <tbody align = 'center'>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        {% for service in all_service %}
+            <td>{{loop.index}}</td>
+            <td align = 'left'>{{service.name}}</td>
+            <td>{{service.yob}}</td>
+            {% if service.gender == 0 %}
+            <td>Nam</td>
+            {% else %}
+            <td>Nữ</td>
+            {% endif %}
+            <td>{{service.height}}</td>
+            <td align = 'left'>{{service.phone}}</td>
+            <td align = 'left'>{{service.address}}</td>
+            <td>{{"Có chủ" if service.status else "Độc thân"}}</td>
+            <td>
+                <a href="{{ url_for('update',service_id = service.id)}}">Sửa</a>
+                <a href="{{ url_for('delete',service_id = service.id)}}">Xóa</a>
+            </td>
+        <tr>
+        {% endfor %}
+        </tr>
+        </tbody>
+        <tr></tr>
+    </table>
+</body>
+</html>

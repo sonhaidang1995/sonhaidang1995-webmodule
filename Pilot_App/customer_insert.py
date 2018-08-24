@@ -10,11 +10,18 @@ from mongoengine import *
 import mlab
 from faker import Faker
 from random import randint, choice
+from character import character_random
 mlab.connect()
-
 fake = Faker()
+image_list = [
+    "../static/image/female-profile.jpg",
+    "../static/image/male-profile.jpg",
+    "../static/image/night.jpg",
+    "../static/image/rocks.jpg",
+    "../static/image/lightning.jpg"
+]
 
-for i in range (50):
+for i in range (30):
     print('Saving customer',i+1,'...')
     new_customer = Customer(
         name = fake.name(),
@@ -23,6 +30,9 @@ for i in range (50):
         phone = fake.phone_number(),
         job = fake.job(),
         company = fake.company(),
-        contacted = choice([True,False])
+        contacted = choice([True,False]),
+        measurements = [randint(30,90),randint(30,90),randint(30,90)],
+        des = character_random(),
+        image = choice(image_list)
     )
     new_customer.save()

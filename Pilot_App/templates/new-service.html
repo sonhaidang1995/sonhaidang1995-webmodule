@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mùa Đông Không Lạnh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {# method mặc định là get, ngoài ra còn có post, put, patch, delete, option, fre flight #}
+    <h1>New Service</h1>
+    <form method = 'post'>
+        <label>Name</label>
+        <input type="text" name = "name" value = 'Tú Linh'>
+        <br>
+        <label>Yob</label>
+        <input type="text" name = 'yob' value = 1994>
+        <br>
+        <label>Phone number</label>
+        <input type="text" name = "phone" value = '0921312321321'>
+        <br>
+        <label>Height</label>
+        <input type="text" name = 'height' value = 160>
+        <br>
+        <label>Address</label>
+        <input type="text" size = "35" name = 'address' value = 'Cuộc sống này, lắm bon chen'>
+        <br>
+        <label>Gender</label>
+        <br>
+        <input type="radio" name = 'gender' value = 0> Male
+        <br>
+        <input type="radio" name = 'gender' value = 1> Female
+        <br>
+        <input type="submit" value = 'Thêm'>
+        
+    
+    {# mặc định của sever => chỉ cho method get đi qua #}
+    </form>
+</body>
+</html>
+{# set default input value and radio button #}

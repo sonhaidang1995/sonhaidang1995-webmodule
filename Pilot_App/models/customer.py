@@ -8,3 +8,6 @@ class Customer(Document):
     job = StringField()
     company = StringField()
     contacted = BooleanField()
+    image = StringField()
+    des = StringField()
+    measurements = ListField()
