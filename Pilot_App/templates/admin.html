@@ -10,10 +10,16 @@
 </head>
 <body>
     <h1>Administrator Playground</h1>
-    <a href="{{ url_for('index')}}">Về trang chủ</a> <br>
-    <a href="{{ url_for('create')}}">Thêm mới</a>
+    <table border = "0px", style="width: 1190px; border-collapse: collapse" >
+        <tbody>
+            <tr>
+                <td><a href="{{ url_for('index')}}">Về trang chủ</a></td>
+                <td style="text-align: right"><a href="{{ url_for('create')}}">Thêm mới</a></td>
+            </tr>
+        </tbody>
+    </table>
     <table border = "1px", style = 'border-collapse: collapse'>
-        <caption>SERVICE LIST</caption>
+        <caption><font size = "6"><b>SERVICE LIST</b></font></caption>
         <thead>
         <tr>
             <th>STT</th>
