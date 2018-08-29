@@ -29,6 +29,8 @@
             <th>Chiều cao</th>
             <th>Điện thoại</th>
             <th>Địa chỉ</th>
+            <th>Mô tả</th>
+            <th>Số đo</th>
             <th>Tình trạng</th>
             <th>Yêu cầu</th>
         </tr>
@@ -44,6 +46,8 @@
             <td>7</td>
             <td>8</td>
             <td>9</td>
+            <td>10</td>
+            <td>11</td>
         </tr>
         {% for service in all_service %}
             <td>{{loop.index}}</td>
@@ -57,6 +61,8 @@
             <td>{{service.height}}</td>
             <td align = 'left'>{{service.phone}}</td>
             <td align = 'left'>{{service.address}}</td>
+            <td align = 'left'>{{service.des}}</td>
+            <td align = 'left'>{{service.measurements}}</td>
             <td>{{"Có chủ" if service.status else "Độc thân"}}</td>
             <td>
                 <a href="{{ url_for('update',service_id = service.id)}}">Sửa</a>

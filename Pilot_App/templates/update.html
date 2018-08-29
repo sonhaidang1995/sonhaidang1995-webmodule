@@ -12,7 +12,7 @@
     <h1>Update profile</h1>
     <form method = 'post'>
         <label>Name</label>
-        <input type="text" name = "name" value = {{ u_profile.name}}>
+        <input type="text" name = "name" value = {{u_profile.name}}>
         <br>
         <label>Yob</label>
         <input type="text" name = 'yob' value = {{u_profile.yob}}>
@@ -25,6 +25,26 @@
         <br>
         <label>Address</label>
         <input type="text" size = "35" name = 'address' value = {{u_profile.address}}>
+        <br>
+        <label>Description</label>
+        <input type="text" size = "35" name = 'des' value = "{{u_profile.des}}">
+        <br>
+        <label>Measurement</label>
+        <input type="text" size = '5' name = 'round1' value = {{u_profile.measurements[0]}}>
+        <input type="text" size = '5' name = 'round2' value = {{u_profile.measurements[1]}}>
+        <input type="text" size = '5' name = 'round3' value = {{u_profile.measurements[2]}}>
+        <br>
+        <Label>Status</Label>
+        <br>
+        {% if u_profile.status == True %}
+        <input type="radio" name = 'status' value = 1 > Độc thân
+        <br>
+        <input type="radio" name = 'status' value = 0 checked = 'checked'> Có chủ
+        {% elif u_profile.status == False %}
+        <input type="radio" name = 'status' value = 1 checked = 'checked'> Độc thân
+        <br>
+        <input type="radio" name = 'status' value = 0 > Có chủ
+        {% endif %}
         <br>
         <label>Gender</label>
         <br>

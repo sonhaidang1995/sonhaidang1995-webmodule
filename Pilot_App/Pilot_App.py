@@ -66,11 +66,26 @@ def create():
         yob = form['yob']
         phone = form['phone']
         gender = form['gender']
+        des = form['hobbies']
+        measurements = [int(form['round1']),int(form['round2']),int(form['round3'])]
+        height = form['height']
+        address = form['address']
+        status = form['status']
+        status1 = False
+        if int(status) == 0:
+            status1 = True
+        elif int(status) == 1:
+            status1 = False
         new_service = Service(
             name = name,
             yob = yob,
             phone = phone,
-            gender = gender
+            gender = gender,
+            des = des,
+            measurements = measurements,
+            address = address,
+            height= height,
+            status = status1
         )
         new_service.save()
         return redirect(url_for('admin'))   
@@ -99,15 +114,27 @@ def update(service_id):
         gender = form['gender']
         height = form['height']
         address = form['address']
+        des = form['des']
+        status = form['status']
+        measurements = [int(form['round1']),int(form['round2']),int(form['round3'])]
+        status1 = False
+        if int(status) == 0:
+            status1 = True
+        elif int(status) == 1:
+            status1 = False
         Service.objects.with_id(service_id).update(
             name = name,
             yob = yob,
             phone = phone,
             gender = gender,
             height = height,
-            address = address
+            address = address,
+            status = status1,
+            des = des,
+            measurements = measurements
         )
         return redirect(url_for('admin'))
+        # return status
 
 if __name__ == '__main__':
     app.run(debug=True)

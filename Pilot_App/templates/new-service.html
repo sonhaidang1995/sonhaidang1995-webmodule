@@ -13,19 +13,27 @@
     <h1>New Service</h1>
     <form method = 'post'>
         <label>Name</label>
-        <input type="text" name = "name" value = 'Tú Linh'>
+        <input type="text" name = "name">
         <br>
         <label>Yob</label>
-        <input type="text" name = 'yob' value = 1994>
+        <input type="text" name = 'yob'>
         <br>
         <label>Phone number</label>
-        <input type="text" name = "phone" value = '0921312321321'>
+        <input type="text" name = "phone">
         <br>
         <label>Height</label>
-        <input type="text" name = 'height' value = 160>
+        <input type="text" name = 'height'>
         <br>
         <label>Address</label>
-        <input type="text" size = "35" name = 'address' value = 'Cuộc sống này, lắm bon chen'>
+        <input type="text" size = "35" name = 'address'>
+        <br>
+        <label>Hobbies</label>
+        <input type="text" size = '50' name = 'hobbies'>
+        <br>
+        <label>Measurement</label>
+        <input type="text" name = 'round1' size = '5'> - 
+        <input type="text" name = 'round2' size = '5'> - 
+        <input type="text" name = 'round3' size = '5'>
         <br>
         <label>Gender</label>
         <br>
@@ -33,7 +41,15 @@
         <br>
         <input type="radio" name = 'gender' value = 1> Female
         <br>
+        <label>Status</label>
+        <br>
+        <input type="radio" name = 'status' value = 1> Single
+        <br>
+        <input type="radio" name = 'status' value = 0> Married
+        <br>
         <input type="submit" value = 'Thêm'>
+        <br>
+
         
     
     {# mặc định của sever => chỉ cho method get đi qua #}
