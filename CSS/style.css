@@ -1,0 +1,41 @@
+ /* selector{
+            property: value; 
+        } */
+        /* Tag name selector */
+        h1{
+            color: red;
+        }
+        h2{
+            color: blue;
+        }
+         /* id selector  */
+        #heading-2 {
+            color: green;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 40px
+        }
+        /* Class selector */
+        .text-right {
+            text-align: right; 
+        }
+
+        #background{
+            height: 500px;
+            width: 100%;
+
+            background-color: lightgreen;
+            background-image: url("https://i.ytimg.com/vi/qLYAq8UwnoI/maxresdefault.jpg");
+            background-size: cover;  
+            background-attachment: fixed;
+        }
+
+        .bg-lightgreen{
+            height: 1000px;
+            width: 100%;
+            background-color: lightgreen;
+        }
+        .bg-lightcoral{
+            height: 1000px;
+            width: 100%;
+            background-color: lightcoral;
+        }
