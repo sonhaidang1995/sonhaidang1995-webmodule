@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMS</title>
+</head>
+<body>
+    <h1>ADMIN</h1>
+    <a href="{{url_for('logout')}}">Logout</a>
+    <form method="POST">
+        <label>Link</label>
+        <input type="text" name = 'link' size = '100'>
+        <input type="submit" value = 'Submit'>
+    </form>
+    <br> <br>
+    <table border = "1px", style="border-collapse: collapse">
+        <thead style = "background-color: lightblue">
+            <th>Stt</th>
+            <th>Title</th>
+            <th>Views</th>
+            <th>Link</th>
+            <th>Thumbnail</th>
+        </thead>
+        <tbody>
+            {% for video in videos %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{video.title}}</td>
+                <td>{{video.views}}</td>
+                <td>
+                    <a href={{video.link}} target = "#">Xem</a>
+                </td>
+                <td><img src="{{video.thumbnail}}" 
+                    width="300" 
+                    height="200">
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>

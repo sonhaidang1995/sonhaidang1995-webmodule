@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mùa Đông Không Lạnh</title>
+</head>
+<a href="{{url_for('admin')}}">Về trang admin</a>
+<body>
+    <table border="1px" style = "border-collapse: collapse">
+        <Caption><b>DANH SÁCH YÊU CẦU</b></Caption>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Ứng viên</th>
+                <th>Người yêu cầu</th>
+                <th>Giờ yêu cầu</th>
+                <th>Phê duyệt yêu cầu</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in id_order %}
+            {% if order.is_accepted == False %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{ order.service_id.name }}</td>
+                <td>{{ order.account_id.name }}</td>
+                <td>{{ order.time }}</td>
+                <td><a href="{{url_for('approval', order_id = order.id)}}">Duyệt yêu cầu</a></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

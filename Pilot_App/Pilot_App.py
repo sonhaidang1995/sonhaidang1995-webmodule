@@ -3,9 +3,15 @@ import mlab
 from mongoengine import *
 from models.service import Service
 from models.customer import Customer
+from models.account import Account
+from models.order import Order
+from datetime import datetime
+from sent_mail import sent_mail
 # import populate
 
 app = Flask(__name__)
+
+app.secret_key = "secret key" 
 
 mlab.connect()
 
@@ -33,11 +39,17 @@ def customer():
 
 @app.route('/admin')
 def admin():
-    all_service = Service.objects()
-    return render_template(
-        'admin.html', 
-        all_service = all_service
-    )
+    if 'loggedin' in session:
+        if session['loggedin'] == True and session['admin'] == True:
+            all_service = Service.objects()
+            return render_template(
+                'admin.html', 
+                all_service = all_service
+            )
+        else:
+            return "Go Home"
+    else:
+        return "Go Home"
 
 @app.route('/customer/<int:g>/')
 def t_customer(g):
@@ -88,15 +100,21 @@ def create():
             status = status1
         )
         new_service.save()
-        return redirect(url_for('admin'))   
+        return redirect(url_for('index'))   
     
 @app.route('/detail/<service_id>')
 def detail(service_id):
     profile = Service.objects.with_id(service_id)
-    if profile is not None:
-        return render_template('detail.html',profile = profile)
+    if 'loggedin' in session:
+        if session['loggedin'] == True:
+            if profile is not None:
+                return render_template('detail.html',profile = profile)
+            else:
+                return "Not found"
+        else:
+            return redirect(url_for('login'))
     else:
-        return "Not found"
+        return redirect(url_for('login'))
 
 @app.route('/update-service/<service_id>', methods = ["GET","POST"])
 def update(service_id):
@@ -135,6 +153,78 @@ def update(service_id):
         )
         return redirect(url_for('admin'))
         # return status
+
+@app.route('/sign-up', methods = ["GET","POST"])
+def signup():
+    if request.method == "GET":
+        return render_template('sign-up.html')
+    elif request.method == "POST":
+        form = request.form
+        name = form['name']
+        email = form['email']
+        username = form['username']
+        password = form['password']
+
+        account = Account(
+            name = name,
+            email = email,
+            username = username,
+            password = password
+        )
+        account.save()
+        return redirect(url_for('login'))
+
+@app.route('/login',methods = ["GET","POST"])
+def login():
+    if request.method == "GET":
+        return render_template('login.html')
+    elif request.method == "POST":
+        form = request.form
+        username = form['username']
+        password = form['password']
+    found_user = Account.objects.get(username = username, password = password)
+    if username =='admin' and password == 'admin':
+        session['loggedin'] = True
+        session['admin'] = True
+        session['id'] = str(found_user['id'])
+        return redirect(url_for('admin'))
+    elif found_user is not None:
+        session['loggedin'] = True
+        session['admin'] = False
+        session['id'] = str(found_user['id'])
+        return redirect(url_for('index'))
+    else:
+        return "Invalid username or password"
+
+@app.route('/logout')
+def logout():
+    session['loggedin'] = False
+    return redirect(url_for('login'))
+
+@app.route('/sent/<profile_id>')
+def sent(profile_id):
+    sent = Order(
+        account_id = session['id'],
+        service_id = profile_id,
+        time = datetime.now(),
+        is_accepted = False
+    )
+    sent.save()
+    return render_template('sent.html')
+
+@app.route('/order')
+def order():
+    id_order = Order.objects()
+    return render_template('order.html',id_order = id_order)
+
+@app.route('/approval/<order_id>')
+def approval(order_id):
+    Order.objects.with_id(order_id).update(
+        is_accepted = True
+    )
+    email = Order.objects.with_id(order_id).account_id['email']
+    sent_mail(email)
+    return redirect(url_for('order'))
 
 if __name__ == '__main__':
     app.run(debug=True)
