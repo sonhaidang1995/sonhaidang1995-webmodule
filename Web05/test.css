@@ -1,0 +1,64 @@
+
+.h-100px{
+    height: 100px;
+}
+
+.h-50px{
+    height: 50px;
+}
+
+.h-1000px{
+    height: 1000px;
+}
+
+.w-100px{
+    width: 100px;
+}
+
+.w-500px{
+    width: 500px;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+.bg-lightblue{
+    background-color: lightblue;
+}
+
+.bg-gray{
+    background-color: gray;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.box-sizing{
+    box-sizing: border-box;
+}
+
+.padding-top-10px{
+    padding-top: 10px;
+}
+
+.float-right{
+    float: right;   
+}
+
+.ten-percent{
+    width: 10%;
+}
+
+.eight-percent{
+    width: 78%;
+}

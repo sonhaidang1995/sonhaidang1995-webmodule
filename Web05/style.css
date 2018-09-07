@@ -1,0 +1,44 @@
+.text-success{
+    color: blue;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-green{
+    background-color: lightgreen;
+}
+
+.w-200px{
+    width: 200px;
+}
+
+.h-200px{
+    height: 200px;
+}
+
+.bg-blue{
+    background-color: dodgerblue;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+#box-model{
+    border: red solid 1px; 
+    margin: 20px;
+    /* Thông thường sẽ có 4 số => gõ 1 số => ăn cho tất cả => gõ 2 số ăn theo chiều dọc => 3 số ăn lần lượt theo kim đồng hồ */
+    /* trên -> phải -> dưới -> trái theo chiều kim đồng hồ */
+    padding: 10px 20px;
+    box-sizing: border-box
+    /* cố định kích thước của box trong trường hợp padding thay đổi */
+}
+
+#child-box{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(65, 140, 116);
+    /* có nhiều cách lấy màu rgb hoặc hex hoặc red, orange */
+}

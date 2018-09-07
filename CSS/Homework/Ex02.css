@@ -1,0 +1,167 @@
+.flex-row-center{ 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.breaker{
+    width: 45%;
+    height: 50px;
+}
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-row-between{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.flex-column{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flex-column-end{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.flex-column-around{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.flex-column-between{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+
+.h-1000px{
+    height: 1000px;
+}
+
+.h-450px{
+    height: 450px;
+}
+
+.h-20px{
+    height: 20px;
+}
+.h-40px{
+    height: 40px;
+}
+
+.h-50px{
+    height: 50px;
+}
+
+.h-100px{
+    height: 100px;
+}
+
+.h-200px{
+    height: 200px;
+}
+
+.h-250px{
+    height: 250px;
+}
+
+.h-300px{
+    height: 300px;
+}
+
+.h-400px{
+    height: 400px;
+}
+
+.w-20p{
+    width: 20%;
+}
+
+.w-25p{
+    width: 25%;
+}
+
+.w-40p{
+    width: 40%;
+}
+
+.w-60p{
+    width: 60%;
+}
+
+.w-80p{
+    width: 80%;
+}
+
+.w-100p{
+    width: 100%;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.footer{
+    background-color: red;
+    height: 100px;
+    width: 100%;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.white{
+    background-color: white;
+}
+
+.green{
+    background-color: green;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.silver{
+    background-color: silver;
+}
+
+
+.pink{
+    background-color: pink;
+}
+
+.aquamarine{
+    background-color: aquamarine;
+}
+.light-green{
+    background-color: lightgreen;
+}
+
+.coral{
+    background-color: coral;
+}
+
+.darkolivegreen{
+    background-color: darkolivegreen
+}
+
+.line-white{
+    border-right: 1px solid white;
+}
