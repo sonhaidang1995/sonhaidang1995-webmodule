@@ -1,0 +1,28 @@
+.bg-pink{
+    background-color: fuchsia
+}
+
+.bg-gray{
+    background-color: #ccc;
+}
+
+.h-200px{
+    height: 200px;
+}
+
+.m-50px{
+    margin: 50px 0px;
+}
+
+#flex-box{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.round-box{
+    display: inline-block;   
+    border: 2px salmon;
+    border-radius: 50%;
+    width: 9%;
+}

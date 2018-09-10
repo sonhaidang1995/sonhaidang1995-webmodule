@@ -1,0 +1,367 @@
+#footer{
+    height: 50px;
+    width: 90%;
+    margin: 0 5%;
+    border-top: 1px solid gray
+}
+
+#body{
+    height: 1000px;
+    width: 90%;
+    display: flex;
+    margin: 0 5%;
+}
+
+.flex-row-wrap{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-row-start{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-row-end{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-row-nowrap{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex-row-nowrap-center{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row-between{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.flex-row-between1{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column-start{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flex-column-end{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.flex-column-between{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.flex-column-around{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.flex-column-around{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.flex-column-center{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 30px;
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+
+.padding-right{
+    padding-right: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+.w-10p{
+    width: 10%;
+}
+
+.w-20p{
+    width: 20%;
+}
+
+.w-24p{
+    width: 24%;
+}
+
+.w-25p{
+    width: 25%;
+}
+
+.w-30p{
+    width: 30%;
+}
+
+.w-40p{
+    width: 40%;
+}
+
+.w-60p{
+    width: 60%;
+}
+
+.w-70p{
+    width: 70%;
+}
+
+.w-75p{
+    width: 75%;
+}
+
+.w-80p{
+    width: 80%;
+}
+
+.w-90p{
+    width: 90%;
+}
+
+.w-100p{
+    width: 100%;
+}
+
+.h-10px{
+    height: 10px;
+}
+
+.h-5p{
+    height: 5%;
+}
+
+.h-8p{
+    height: 8%;
+}
+
+.h-10p{
+    height: 10%;
+}
+
+.h-18p{
+    height: 18%;
+}
+
+.h-20p{
+    height: 20%;
+}
+
+.h-28p{
+    height: 28%;
+}
+
+.h-30p{
+    height: 30%;
+}
+
+.h-40p{
+    height: 40%;
+}
+
+.h-50p{
+    height: 50%;
+}
+
+.h-60p{
+    height: 60%;
+}
+
+.h-65p{
+    height: 65%;
+}
+
+.h-80p{
+    height: 80%;
+}
+
+.h-100p{
+    height: 100%;
+}
+
+.white{
+    color: white;
+}
+
+.green{
+    color: green;
+}
+
+.gray{
+    color: gray;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-green1{
+    background-color: #c8f4da;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.line-white{
+    border-right: 1px solid white;
+}
+
+.bottom-line{
+    border-bottom: 1px dotted gray;
+}
+
+.right-line{
+    border-right: 1px solid gray;
+}
+.top-line{
+    border-top: 1px dotted gray;
+}
+
+.all-border{
+    border: 1px solid lightgreen;
+}
+
+.bg-cover{
+    background-size: cover;
+}
+
+.bg-icon{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.logo{
+    background-image: url(images/page-logo.png)
+}
+
+.taste{
+    background-image: url(images/icons/nav-tastemakers.png);
+}
+
+.contribute{
+    background-image: url(images/icons/nav-contribute.png);
+}
+
+.alist{
+    background-image: url(images/icons/nav-alist.png);
+}
+
+.about{
+    background-image: url(images/icons/nav-about.png);
+}
+
+.blog{
+    background-image: url(images/icons/nav-blog.png);
+}
+
+.tweet{
+    background-image: url(images/icons/icon-twitter.png);
+}
+
+.facebook{
+    background-image: url(images/icons/icon-facebook.png);
+}
+
+.rss{
+    background-image: url(images/icons/icon-rss.png);
+}
+
+.header{
+    background-image: url(images/header.jpg);
+}
+
+.email{
+    background-image: url(images/icons/46951.png);
+}
+
+.cookbook{
+    background-image: url(images/cookbooks-blog.jpg);
+}
+
+.potato{
+    background-image: url(images/potato.jpg);
+}
+
+.pinterest{
+    background-image: url(images/pinterest.jpg);
+}
+
+.dinner{
+    background-image: url(images/dinner-blog.jpg);
+}
+
+.font-lobster{
+    font-family: 'Lobster', cursive;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-sans{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.fix-font{
+    font-size: 12px;
+}
+
+.fix-font-height{
+    line-height: 100%;
+}
