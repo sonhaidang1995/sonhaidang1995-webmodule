@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,7 +15,6 @@
         <div>
             {% if service.gender == 0 %}
             <img src="../static/image/female-profile.jpg" alt="">
-            <!-- image -->
             {% else %}
             <img src="../static/image/male-profile.jpg" alt="">
             {% endif %}
@@ -26,5 +25,24 @@
             <hr>
         </div>
     {% endfor %}
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+    {% include "meta-data.html" %}
+</head>
+
+<body>
+    {% include "search/nav.html" %}
+    {% include "search/carousel.html" %}
+    {% include "search/list-sev.html" %}
+    {% include "search/footer.html" %}
 </body>
 </html>

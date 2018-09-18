@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mùa đông không lạnh</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    {% include "meta-data.html" %}
 </head>
+
 <body>
-    <h1>Mùa Đông Không Lạnh</h1>
-    <a href="{{ url_for('search', g=0)}}">Click vào em đi anh!</a> <br> <br>
-    <a href="{{ url_for('search', g=1)}}">Click vào anh đi em!</a> <br> <br>
-    <a href="{{ url_for('t_customer', g = 0)}}">Top 10 hottest single man!</a> <br> <br>
-    <a href="{{ url_for('t_customer', g = 1)}}">Top 10 hottest single woman!</a> <br> <br>
-    <a href="{{ url_for('admin')}}">Administrator Page</a> <br> <br>
-    <a href="{{url_for('create')}}">Thêm mới</a> <br> <br>
-    <a href="{{url_for('logout')}}">Đăng xuất</a>
+    {% include "homepage/nav.html" %}
+    {% include "homepage/carousel.html" %}
+    {% include "homepage/gender.html" %}
+    {% include "homepage/vote.html" %}
+    {% include "homepage/service.html" %}
+    {% include "homepage/footer.html" %}
 </body>
 </html>
