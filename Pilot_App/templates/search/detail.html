@@ -1,11 +1,12 @@
-<div class="card mb-2" style="width: 16rem;">
+ {% for service in all_service %}
+<div class="card mb-2" style="width: 20rem;">
     <img class="card-img-top" src="../../static/image/rocks.jpg" alt="Card image cap">
     <div class="card-header">
-        <h5 class="card-title">Đặng Sơn Hải</h5>
+        <h5 class="card-title">{{service.name}}</h5>
     </div>
     <div class="card-body">
-        <p class="card-text">Năm sinh:</p>
-        <p class="card-text">Chiều cao:</p>
+        <p class="card-text">Năm sinh:{{service.yob}}</p>
+        <p class="card-text">Chiều cao: {{service.height}}</p>
     </div>
     <div class="card-footer d-flex justify-content-end">
         <a href="#" class="btn btn-dark">
@@ -14,3 +15,17 @@
         </a>
     </div>
 </div>
+{% endfor %}
+
+<!-- <div class="media mb-2">
+<img class="align-self-center mr-3 img-thumbnail" src="../../static/image/rocks.jpg" width="200" height="200" >
+<div class="media-body">
+    <h5 class="mt-0">Đặng Sơn Hải</h5>
+    <p>Năm sinh:</p>
+    <p>Chiều cao:</p>
+    <a href="#" class="btn btn-dark">
+        <i class="fas fa-heart"></i>
+        Tìm hiểu thêm
+    </a>
+</div>
+</div> -->
